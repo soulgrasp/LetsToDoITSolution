@@ -10,7 +10,7 @@ using LetsToDoIT.Models.Notes;
 
 namespace LetsToDoIT.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] //change this laterz if needed
     [ApiController]
     public class NotesController : ControllerBase
     {
