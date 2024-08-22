@@ -1,0 +1,10 @@
+@LetsToDoIT_HostAddress = http://localhost:5038
+
+# GET {{LetsToDoIT_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+GET {{LetsToDoIT_HostAddress}}/Weather/
+Accept: application/json
+
+
+###
