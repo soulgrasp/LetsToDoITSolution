@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using LetsToDoIT.Data;
 
 namespace LetsToDoIT
 {
@@ -6,6 +9,8 @@ namespace LetsToDoIT
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<LetsToDoITContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("LetsToDoITContext") ?? throw new InvalidOperationException("Connection string 'LetsToDoITContext' not found.")));
 
             // Add services to the container.
 
